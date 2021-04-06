@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 li {
@@ -16,10 +17,6 @@ a {
   width: 200px;
 }
 
-body {
-  background-color: rgba(181, 238, 233, 0.685);
-}
-
 .projetos img {
   height: 100px;
   width: 100px;
@@ -28,4 +25,38 @@ body {
 .icones img {
   height: 50px;
   width: 50px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 100px);
+}
+
+header {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: aqua;
+}
+
+main {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: blue;
+}
+
+.figure {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: brown;
+}
+
+footer {
+  background-color: chartreuse;
 }
